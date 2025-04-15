@@ -6,71 +6,89 @@
 
 钓鱼就是用----制作网页或者直接就是一个文件。
 
-17min  --- 发件人的邮箱地址伪造  spf---发件人策略框架电子邮件认证机制 ---作用是防止伪造邮件地址
+ --- 发件人的邮箱地址伪造  spf---发件人策略框架电子邮件认证机制 ---作用是防止伪造邮件地址
 
-20min  判断SPF   临时邮箱---是用来防溯源（网上找一个就行）  无spf验证和有spf验证
+ 判断SPF   临时邮箱---是用来防溯源（网上找一个就行）  无spf验证和有spf验证
 
-![image-20241224104756204](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224104756204.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/462bb27d-51a8-407d-b297-69edd48abb54" />
 
-![image-20241224105054614](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224105054614.png)
+
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/10778fe1-1fe0-419d-800b-761439921790" />
+
 
 无spf验证就直接伪造，有spf就转发或者模糊。
 
 这种就是  ~all ，也就是说 ip除了这个范围都能发，基本就是没验证：
 
-![image-20241224105316827](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224105316827.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/8e01c831-1a79-468f-90ce-0763445a22d1" />
 
-![image-20241224105531575](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224105531575.png)
 
-29min  kali自带工具： swaks   可以伪造邮箱给临时邮箱发送邮件。没有spf验证就直接伪造：
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/76ad7b78-1a05-4b7d-9534-a83421e2dd40" />
 
-![image-20241224110424396](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224110424396.png)
+  kali自带工具： swaks   可以伪造邮箱给临时邮箱发送邮件。没有spf验证就直接伪造：
 
-38min  大厂一般都有spf验证，方法一般是转发或修改后缀等方法，修改后缀 ：字体上的相似：1--l   0----o---O   域名上的：aliyun--aliyum    41min                        1h28min  记得先将自己的spf验证打开
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/d096edb5-982b-4571-988f-80baa79f54bc" />
+
+
+38min  大厂一般都有spf验证，方法一般是转发或修改后缀等方法，修改后缀 ：字体上的相似：1--l   0----o---O   域名上的：aliyun--aliyum    41min                          记得先将自己的spf验证打开
 
 这里就是spf验证没有通过，所以没有发给qq.com,他会验证你的发件人和发件的服务地址是否相同（admin.qq.com）,这里明显不一致，所以失败：
 
-![image-20241224110714893](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224110714893.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/69ea6e2e-6050-4bf2-991d-f0854a266113" />
 
 可以用混淆：
 
-![image-20241224111130250](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224111130250.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/d62c10aa-3e53-4ae6-a44c-a92517f8f730" />
 
-49 min 转发：  在线邮件系统，作为中转服务器https://www.sendcloud.net/。发给网易，但是进入垃圾箱了，-----重新找个号 1h05min 继续演示。**API_USER**       Aasddssd@sad
 
-![image-20241224123930769](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224123930769.png)
+ 转发：  在线邮件系统，作为中转服务器https://www.sendcloud.net/。发给网易，但是进入垃圾箱了，-----重新找个号 1h05min 继续演示。**API_USER**       Aasddssd@sad
 
-![image-20241224124422497](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224124422497.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/015539fb-0659-4562-999e-45cf6355fe02" />
+
+xd视频案例
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/d360fd63-eae0-4eaf-8a47-69dae127b5bb" />
+
 
 ### gophish
 
-1h09min   本地工具gophish.exe ，邮件转发、运行后重新更改密码：admin/admin!@#45         打开进行配置：qmgxqmobmfobbhfg 这就是邮箱的使用权，使用口令：
+  本地工具gophish.exe ，邮件转发、运行后重新更改密码：admin/admin!@#45         打开进行配置：qmgxqmobmfobbhfg 这就是邮箱的使用权，使用口令：
 
-![image-20241224125347255](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224125347255.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/ae3b22f3-35e2-4acb-bfef-9459a108010a" />
 
-制作钓鱼页面：![image-20241224130355344](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224130355344.png)
+
+制作钓鱼页面：
+![image](https://github.com/user-attachments/assets/000ff431-5cc5-4b46-a009-edb838db3945)
+
+
+
+
 
 这里导入还要注意格式，有的可能会乱码，
 
-![image-20241224131123632](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224131123632.png)
+![image](https://github.com/user-attachments/assets/e4e3bde8-fb4c-4929-8407-16700a4b4ddd)
+
+
 
 还可以伪造链接：
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/80a06209-b804-4900-9efc-3d4e05316c7b" />
 
-![image-20241224132249697](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224132249697.png)
 
 这里都需要配置：
 
-![image-20241224133637825](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224133637825.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/516d9594-1a25-499a-a338-571f17d030bc" />
 
-![image-20241224133549050](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224133549050-1735018590613-1.png)
+![image](https://github.com/user-attachments/assets/660f4f3b-1eee-4e79-b17f-30800bb340a8)
+
 
 然后收到钓鱼的，点击链接会跳转到自己写的网址，但是这里发件人为自己：
 
-![image-20241224133921471](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224133921471.png)
+![image](https://github.com/user-attachments/assets/1604ea8e-54f4-4b3c-bff1-b8c0e58c7aa9)
 
-1h20min 伪造来件人
 
-![image-20241224134549769](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224134549769.png)
+ 伪造来件人
+
+![image](https://github.com/user-attachments/assets/a00167f4-7f33-4893-a8ca-ad245d926ff9)
+
 
 
 
@@ -80,29 +98,31 @@
 
 上面就是会有一个代发的提醒，下面这就看怎么绕过
 
-注册一个域名16min   20min
+注册一个域名
 
-25min  gophish
+ gophish
 
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/fa46a1f0-f735-4147-8b92-55ecd6ce47f1" />
 
-
-![image-20241224191152770](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224191152770.png)
 
 39min  演示一遍搭建过程
 
 需要申请一个域名，用来演示，这里就不演示了。懒的配环境，这网址就是你自己的服务器，邮件地址就是自己申请的域名，网址建议在香港，域名就搞便宜的。实战肯定是根据目标机来创建域名。
 
-![image-20241224174904656](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224174904656.png)
+![image](https://github.com/user-attachments/assets/6521846e-6c0a-41a5-8d05-d7fb6b4adbe1)
+
 
 然后这里就可以让代发人换成我们创建的域名，配合gohish工具，进行钓鱼：
 
 主要就是在这里换别的都不用太变动，换成test会显示带转发为test
 
-![image-20241224175415459](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224175415459.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/87df4003-2b96-4563-a7c5-d713aab1a0bf" />
+
 
 这里就更容易上钩，如果在将域名换个像的，更好：
 
-![image-20241224191603771](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224191603771.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/15e5bbfd-b9ac-4182-812b-5686032c1454" />
+
 
 # 网页钓鱼
 
@@ -114,95 +134,108 @@
 
 #### 工具
 
-8min  用kali工具setoolkit来制造一个网页、还是有点缺陷的，对大型网站复原的不太好。3站点克隆
+  用kali工具setoolkit来制造一个网页、还是有点缺陷的，对大型网站复原的不太好。3站点克隆
 
-![image-20241224232754897](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224232754897.png)
+<img width="380" alt="image" src="https://github.com/user-attachments/assets/ce32757c-adc8-41b1-9abc-7d06ffe3a08f" />
 
-复制成功，有点小瑕疵，毕竟是个大战：
 
-![image-20241224233348624](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224233348624.png)
+复制成功，有点小瑕疵，毕竟是个大厂的站（只是学习一下）：
+
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/10188ada-179f-4207-b18c-a6df16e7c0f2" />
+
 
 这里还能捕获到登录的账号密码，密码是jd自己的加密：
 
-![image-20241224233643087](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241224233643087.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/c0343f56-45d2-43ef-8bf3-925b3e080ab1" />
 
 
 
 登录几个方法：账户密码、扫码、手机短信验证。
 
-14min  武大的，可以接收到输入的信息，        ----- 21 min 
+ 武大的，可以接收到输入的信息，        ----- 21 min 
 
 制作网页大多数是获取用户登录密码，但是大多密码都是加密的，所以这里就需要解密，JS逆向    这种网站就可以抓到（小网站）：
 
-![image-20241225230237736](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241225230237736.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/543cc3ce-289d-45d0-8107-436fad23f634" />
+
 
 这里动态码抓到了，明文：
 
-![image-20241225230719836](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241225230719836.png)
+![image](https://github.com/user-attachments/assets/5d994971-385a-44ff-aa48-07df4ec10eab)
+
 
 这种二维码就抓不到：
+![image](https://github.com/user-attachments/assets/cea38e1d-5b54-4cfe-ba8b-3c9e0c4d7753)
 
-![image-20241225231759977](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241225231759977.png)
 
 ##### 2
 
-27min  国产的，gobin，     构造页面用gobin.yaml，构造攻击用demo.yaml。抓取账号信息在access.log中
+  国产的，gobin，     构造页面用gobin.yaml，构造攻击用demo.yaml。抓取账号信息在access.log中
 
 工具的优点就是方便，但是缺点很明显：是借助的原本网页的流量，来伪造的，所以这里加密方式也是别人的，需要自己解密。类似于端口映射。
-
-![image-20241225232335833](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241225232335833.png)
-
-![image-20241225232616061](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241225232616061.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/5d061916-720b-4f9f-b913-02b57a856e72" />
 
 
-
-![image-20241225232449433](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241225232449433.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/c4c354a3-d42f-4433-b47c-1f33e081945a" />
 
 
 
-![image-20241225232854753](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241225232854753.png)
+
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/43353c4a-f101-47fb-b4be-92a4b836f811" />
+
+
+
+
+![image](https://github.com/user-attachments/assets/77e6a46a-fded-41af-8c39-386b94b54e9a)
+
 
 抓取：这里密码还是密文
 
-![image-20241225233235069](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241225233235069.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/4ca5fb94-f0dd-4c88-bca1-e9f9606971e7" />
+
 
 #### 手工
-
-46min 自己手工的优点：就是解决加密的逻辑的地方，这里是将要制作的网页先另存为，然后找加解密的地方。
+自己手工的优点：就是解决加密的逻辑的地方，这里是将要制作的网页先另存为，然后找加解密的地方。
 
 这里以jd的登录页面为例子：
 
-![image-20241226121047727](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241226121047727.png)
+![image](https://github.com/user-attachments/assets/b19cccec-c553-4caa-ad9d-565f3e9076fa)
+
 
 在找到登录框按钮的位置：
 
-![image-20241226121419072](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241226121419072.png)
+![image](https://github.com/user-attachments/assets/1c74dfd4-42f9-4e01-b203-e4b4319527b9)
+
 
 定位完成后：
 
-53min  开始手工制作钓鱼页面。
+  开始手工制作钓鱼页面。
 
 更改3段地方，最后让把登录的账户密码给我们写的post.php脚本中：
 
-![image-20241226124149780](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241226124149780.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/5fe8c91b-a3b6-44cf-a88c-6043eba56d9b" />
 
 
 
-![image-20241226123911076](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241226123911076.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/d5d390ff-5b09-4585-8e75-84711bc7c20f" />
+
 
 post.php：
 
-![image-20241226125123154](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241226125123154.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/312d6e31-53c7-4a65-89aa-d371fa8191a9" />
 
-![image-20241226124928611](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241226124928611.png)
 
-![image-20241226124742791](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241226124742791.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/24797d1d-5aae-41f0-a1d0-0bc4b31a8464" />
 
-1h10min   如果登录为扫二维码登录。思路：（异步调用）将自己本地的二维码放到钓鱼网页上，然后让目标扫，在自己本地进行登录。一般来说扫的二维码都是http:\\weixin..........的网页，这里就找到替换成自己的。
+
+![image](https://github.com/user-attachments/assets/ea8fb2af-2bfa-458d-b0dc-0ef3cc259535)
+
+如果登录为扫二维码登录。思路：（异步调用）将自己本地的二维码放到钓鱼网页上，然后让目标扫，在自己本地进行登录。一般来说扫的二维码都是http:\\weixin..........的网页，这里就找到替换成自己的。
 
 思路：就是将钓鱼页面的网站二维码换成自己这边在线的二维码，让鱼儿扫钓鱼页面的，然后自己这边就成功登录鱼儿的账号。
 
-![image-20241226125641632](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241226125641632.png)
+![image](https://github.com/user-attachments/assets/d01a87ae-990f-4374-a588-60306fabe781)
+
 
 二维码没有搞出来，下节课继续。思路比较重要。
 
@@ -213,32 +246,38 @@ post.php：
 
 
 本机office有点问题，完了还没有虚拟机，搞不了。wps上线不了
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/ff816c70-3b1c-4e1c-b89c-c9cae084d480" />
 
-![image-20250105142805570](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105142805570.png)
 
-6min  cs生成宏 
+ cs生成宏 
 
-![image-20241226170519193](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241226170519193.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/671ab0f8-f318-4457-9ca6-d317e9aa68b7" />
+
 
 10min 宏上线
 
-![image-20241226172228948](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241226172228948.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/3da16753-2ee9-438d-9f24-ba67ad0068b0" />
+
 
 选择否，选择这里两种格式的文档后缀便可以用宏上线，docx新版的格式是上线不了宏的，而且这两种docm和doc打开后是需要点击启动宏才能完成上线，所以用office钓鱼时就让对方、诱导他启用宏，比如说什么，启动后才能打开啥的、或者启用宏后才能编辑啥的：
 
-![image-20250105141957032](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105141957032.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/7cd42edf-a649-41da-b655-7a1922b760c0" />
+
 
 ##### docm：
 
-![image-20250105142328611](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105142328611.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/f3b35f72-cf26-4f6f-9ec9-3267ba3e9a3f" />
+
 
 这里需要点击启用宏，所以新版office比较难上线：
 
-![image-20241226172649818](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241226172649818.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/8ce92c43-3f68-42d2-bcb0-0269c9d3bb5b" />
+
+
 
 ##### doc:
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/a2a2424a-14cc-4226-b04a-58aec555f98c" />
 
-![image-20250105143216156](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105143216156.png)
 
 18min   早期的word版本是可以上线的，现在是需要启动功能后才能上线 .    c2默认生成的宏代码也需要做免杀，	   模版-启动模版宏 ： dotx-dot dotm  	 potx-pot potm 		xlst-xlt xltm  需要改文件格式，保存宏文件需要用到以前的格式来保存
 
@@ -246,11 +285,13 @@ post.php：
 
 #### excel利用：
 
-![image-20250105144303467](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105144303467.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/4458580a-a686-4edc-98ff-3e1db6021c65" />
+
 
 诱导目标上钩：
 
-![image-20250105144442922](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105144442922.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/cfb243d6-373f-4d2a-b20e-256341a37faf" />
+
 
 pptx-ppt&pptm的这两种ppt&pptm也就不说了。
 
@@ -260,61 +301,67 @@ pptx-ppt&pptm的这两种ppt&pptm也就不说了。
 
 #### 模板：
 
-28min     模板文件。 所以就可以看文档的后缀来知道是否为钓鱼文件，也不一定
+   模板文件。 所以就可以看文档的后缀来知道是否为钓鱼文件，也不一定
 
-![image-20250105150230550](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105150230550.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/0ed2bebc-b6eb-4ecd-9ff6-cc1e3c300867" />
 
 保存模板：
 
-![image-20250105150644569](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105150644569.png)
+
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/3905d372-b70c-4769-8c2b-14b18feccd48" />
+
 
 这里就可以将模板发过去钓鱼：
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/27f7188e-575d-49d0-ad74-b038751ff5ea" />
 
-![image-20250105150928735](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105150928735.png)
+
 
 #### CVE ：
 
-48min  CVE      影响office不仅和版本有关，也和内部版本有关，就是内核问题。
+  CVE      影响office不仅和版本有关，也和内部版本有关，就是内核问题。
 
 这里看着是2021专业增强版，但是CVE是对里面的内部版本也有差异，就是也得看内部版本好是否符合：
 
-![image-20250105151151619](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105151151619.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/ee09554b-9f1a-47fc-8c13-d88af3f5060e" />
+
 
 执行这个命令后如果有计算器弹出，则存在该漏洞cve-2022
 
-![image-20241226164933257](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241226164933257.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/43807193-7306-4775-a43a-886ceb910ad4" />
 
-53min  复现   这里是用exp生成一个doc文档，然后上传到目标，打开文档后执行写入的脚本命令，远程下载一个后门，并运行，这里对打开的office版本（内部版本号和自身版本）有要求，也要对文档和远程后门进行免杀处理。
+  复现   这里是用exp生成一个doc文档，然后上传到目标，打开文档后执行写入的脚本命令，远程下载一个后门，并运行，这里对打开的office版本（内部版本号和自身版本）有要求，也要对文档和远程后门进行免杀处理。
 
 先在此目录下开一个8080端口的web服务，方便让后门远程下载后门（8123.exe后门）
+![image](https://github.com/user-attachments/assets/7f26f700-c90e-41ae-afd0-031f7e396f1b)
 
-![image-20250105153004127](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105153004127.png)
 
 下来就是用exp的py文件生成一个doc文件，这里的exp原本是用来生成一个nc的doc文档，然后再反弹回来，我们这里是用它生成一个带后门的（远程下载后门）doc文档，所以后面那些什么端口和ip不用管，本来是用于nc反弹的：
 
 先更改远程下载的ip和端口，刚才开的web服务(实战肯定就是 外网ip)：
 
-![image-20250105152919652](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105152919652.png)
+![image](https://github.com/user-attachments/assets/284e368b-dcdc-4c3f-a02a-f0a6d8a04259)
+
 
 执行命令生成follina.doc文档
 
-![image-20250105153359401](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105153359401.png)
+![image](https://github.com/user-attachments/assets/5886081d-58fc-405d-a384-1192ecdf2b91)
+
 
 将生成的文档上传目标，诱导打开（当然后期需要对其进行免杀处理），打开后会将后门下载到指定目录，命名为nc.exe（再py脚本中可以更改）：
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/425bd81f-e26c-4930-82c4-5fd8a015eedd" />
 
-![image-20250105153701547](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105153701547.png)
 
 然后只需要将生成的文档打开就可以实现上线
 
-1h04 office历史版本。
+ office历史版本。
 
-1h11min   CVE2021：
+   CVE2021：
 
 使用msf上线，就是利用msf生成一个带后门dll文件，再用cve的exp脚本绑定dll文件生成一个docx文档，、
 
 在启动msf监听刚才的dll文件，还需要监听文档。将文档上传到目标上执行，上线msf：
 
-![image-20250105173642808](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20250105173642808.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/d7540f91-b228-4d0b-97fa-558091551af6" />
 
 
 
@@ -328,17 +375,19 @@ pptx-ppt&pptm的这两种ppt&pptm也就不说了。
 
 #### RLO后缀
 
-6min  可以用RIO技术将文件后缀名更改，既更改了文件后缀，又还能执行文件本来功能。
+  可以用RIO技术将文件后缀名更改，既更改了文件后缀，又还能执行文件本来功能。
 
-![image-20241226212255269](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241226212255269.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/2594d86b-1b47-4205-8c54-9c82d2a66c6c" />
+
 
 
 
 #### 电子书
 
-12 min      .CHM  后缀       利用电子书实现无文件上线。利用的是Web投递在电子书中插入
+CHM  后缀       利用电子书实现无文件上线。利用的是Web投递在电子书中插入
 
-![image-20241226213009850](E:\新建文件夹\新建文件夹\typora学习笔记软件\缓存\image-20241226213009850.png)
+<img width="420" alt="image" src="https://github.com/user-attachments/assets/61e73745-109d-4fbc-b087-e11386e7b63a" />
+
 
 编译刚才的html文件为电子书：
 
